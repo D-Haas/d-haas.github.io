@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel Haas - Projetos</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <style>
+    .project_list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+    }
+
+    .project {
+      display: flexbox;
+      width: min(100%, 37em);
+      text-align: justify;
+      align-content: space-around;
+      justify-content: space-around;
+      justify-items: center;
+
+      border: 5px solid #11111b;
+      border-radius: 20px;
+      padding: 1.3em;
+      margin: 2.3em 1.3em;
+
+      box-shadow: 0 0 15px 5px #a6adc8;
+      transition: box-shadow 0.31s ease;
+    }
+
+    .project:hover {
+      box-shadow: 0 0 25px 10px #a6adc8;
+    }
+
+    .project h1, .project b {
+      text-align: center;
+    }
+
+    .project img {
+      height: 2em;
+    }
+
+    .image_list {
+      margin: 2em 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    #hover_red:hover {
+      color: #f38ba8;
+    }
+
+    #getmm_link          {color: #b4befe;}
+    #getmm_link:hover    {color: #89dceb;}
+    #mfpapaya_link       {color: #f9e2af;}
+    #mfpapaya_link:hover {color: #fab387;}
+    #riogen_link         {color: #89b4fa;}
+    #riogen_link:hover   {color: #74c7ec;}
+    #rbrd_link           {color: #94e2d5;}
+    #rbrd_link:hover     {color: #a6e3a1;}
+
+  </style>
+  <body>
+    <div class="topbar">
+      <a href="index.html">Início</a>
+      <a href="projs.html">Projetos</a>
+      <a href="about.html">Sobre</a>
+    </div>
+    <div class="project_list">
+      <div class="project">
+        <h1>P.H.A.A.S.T para <a id="getmm_link" href="https://getmm.iq.ufrj.br/">GETMM (UFRJ)</a></h1>
+        <h1>(Projeto de mestrado)</h1>
+        Um framework open-source para a busca de conformações de menor energia (mínimos globais) voltado a modularidade e paralelismo em múltiplas máquinas.
+        <div class="image_list">
+          <img src="data/python_icon.svg" alt="Ícone de linguagem Python">
+          <img src="data/c_icon.svg" alt="Ícone de linguagem C">
+        </div>
+        <b style="display: block;">Disponibilidade do repositório: Previsto para fevereiro de 2027</b>
+
+      </div>
+
+      <div class="project">
+        <h1>Desenvolvimento Backend para <a id="rbrd_link" href="https://iiirbrd.cbpf.br/home">III Encontro RBRD</a></h1>
+        Projeto de parceria do [CBPF/Fiocruz/IBICT] para apoio no evento da Rede Brasileira de Repositórios Digitais. Conta com desenvolvimento front e back end para estilização, banco de dados, organização e designer, entrega de documentos.
+        <div class="image_list">
+          <img src="data/python_icon.svg" alt="Ícone de linguagem Python">
+          <img src="data/flask_icon.svg" alt="Ícone de framework Flask">
+          <img src="data/sqlalchemy_icon.svg" alt="Ícone de biblioteca SQL Alchemy">
+        </div>
+        <b style="display: block;"><a id="hover_red" href="./data/certificado_rbrd.pdf">Certificado</a></b>
+      </div>
+
+
+    </div>
+    <div class="project_list">
+    </div>
+  </body>
+</html>

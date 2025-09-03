@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <style>
+    .card_folder {
+      width: 100%;
+      height: calc(100vh - 120px - 5em - 4em);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      width: 17cm;
+      height: 7cm;
+      border-radius: 20px;
+      border: 0.1cm solid #11111b;
+      align-items: center;
+      box-shadow: 0 0 15px 5px #cba6f7;
+      transition: box-shadow 0.71s ease;
+      transition: scale 0.31s ease;
+      background-color: #313244;
+    }
+    
+    .card:hover {
+      box-shadow: 0 0 25px 10px #cba6f7;
+      scale: 1.1;
+    }
+    
+    .card_data {
+      height: 100%;
+      font-size: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .card_photo img {
+      height: 5.7cm;
+      border-radius: 50%;
+      border: 0.1cm solid #11111b;
+      margin: 0 0.65cm;
+    }
+
+    .card_data img {
+      height: 1.5em;
+      margin-right: 1em;
+    }
+
+    .card_data span {
+      display: flex;
+      align-items: center;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .card_data a {
+      color: #cdd6f4;
+      text-decoration: none;
+      transition: color 0.31s;
+    }
+
+    .card_data a:hover {
+      color: #cba6f7;
+    }
+  
+  </style>
+  <body>
+    <div class="topbar">
+      <a href="index.html">Início</a>
+      <a href="projs.html">Projetos</a>
+      <a href="about.html">Sobre</a>
+    </div>
+
+    <div class="card_folder">
+      <div class="card">
+        <div class="card_photo">
+          <img src="data/foto_perfil.jpg" alt="Foto de perfil">
+        </div>
+        <div class="card_data">
+          <span>
+            <img src="data/linkedin_icon.svg" alt="Ícone do LinkedIn">
+            <a href="https://www.linkedin.com/in/daniel-haas-8356b51aa/"><b>Daniel Haas</b></a>
+          </span>
+          <br>
+          <span>
+            <img src="data/email_icon.svg" alt="Ícone de e-mail">
+            <a href="mailto:lebre3d@gmail.com">lebre3d@gmail.com</a>
+          </span>
+          <br>
+          <span>
+            <img src="data/whatsapp_icon.svg" alt="Ícone de telefone">
+            <a href="https://api.whatsapp.com/send?phone=21974917836">(21) 97491-7836</a>
+          </span>
+          <br>
+          <span>
+            <img src="data/lattes_icon.svg" alt="Ícone de currículo Lattes">
+            <a href="http://lattes.cnpq.br/9762311143069806">Currículo Lattes</a>
+          </span>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
