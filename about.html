@@ -18,8 +18,14 @@
     .card {
       display: flex;
       flex-direction: row;
-      width: 17cm;
-      height: 7cm;
+      flex-wrap: wrap;
+      width: min(85vw, 17cm);
+      height: auto;
+      
+      justify-content: center;
+
+      padding: 1em 0em;
+
       border-radius: 20px;
       border: 0.1cm solid #11111b;
       align-items: center;
@@ -36,10 +42,12 @@
     
     .card_data {
       height: 100%;
+      width: auto;
       font-size: 1.5em;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-around;
+
     }
 
     .card_photo img {
@@ -58,7 +66,7 @@
       display: flex;
       align-items: center;
       margin: 0px;
-      padding: 0px;
+      padding: 0.5em 0em;
     }
 
     .card_data a {
@@ -86,8 +94,8 @@
         </div>
         <div class="card_data">
           <span>
-            <img src="data/linkedin_icon.svg" alt="Ícone do LinkedIn">
-            <a href="https://www.linkedin.com/in/daniel-haas-8356b51aa/"><b>Daniel Haas</b></a>
+            <img src="data/person_icon.svg" alt="Ícone de pessoa">
+            <b>Daniel Haas</b>
           </span>
           <br>
           <span>
@@ -101,10 +109,16 @@
           </span>
           <br>
           <span>
-            <img src="data/lattes_icon.svg" alt="Ícone de currículo Lattes">
-            <a href="http://lattes.cnpq.br/9762311143069806">Currículo Lattes</a>
+            <a href="http://lattes.cnpq.br/9762311143069806">
+              <img src="data/lattes_icon.svg" alt="Ícone de currículo Lattes">
+            </a>
+            <a href="https://github.com/D-Haas">
+              <img src="data/github_icon.svg" alt="Ícone do Github">
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-haas-8356b51aa/">
+              <img src="data/linkedin_icon.svg" alt="Ícone do LinkedIn">
+            </a>
           </span>
-
         </div>
       </div>
     </div>
