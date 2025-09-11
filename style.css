@@ -24,17 +24,39 @@ a:hover {
 }
 
 :root {
-  --img_size: min(17.5em, 30vw);
+  --img_size: 29em;
   --img_padding: 2em;
   --img_bottom_margin: 2em;
   --img_border_size: 1em;
   --stripe_height: calc(var(--img_size) * 2 / 3);
 }
 
+@media (max-width: 912px) and (orientation: portrait) {
+  :root {
+    --img_size: 90vw;
+    --img_padding: 2em;
+    --img_bottom_margin: 2em;
+    --img_border_size: 1em;
+    --stripe_height: calc(var(--img_size) * 2 / 3);
+  }
+}
+
 .topbar {
+  display: flex;
+  flex-wrap: wrap;
   background: linear-gradient(to bottom, #11111b, #11111b, #11111b00);
-  height: 120px;
-  padding: 31px;
+  width: calc(100% - 31px * 2);
+  height: auto;
+  padding: 23px 31px 50px 31px;
+}
+
+.topbar div {
+  width: max(16.5em, 40vw);
+}
+
+.topbar span {
+  width: 10em;
+  text-align: center;
 }
 
 .topbar a {
@@ -44,44 +66,76 @@ a:hover {
   margin: 0 0.5em;
 }
 
+.photo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.photo div {
+  flex-grow: 9999;
+}
+
+.photo #photo {
+  width: max(var(--img_size), 30%);
+  height: var(--img_size);
+  /* background-color: #6c7086; */
+}
+
 
 .photo img {
-  height: calc(var(--img_size) * 2);
-  width: calc(var(--img_size) * 2);
-  size: calc(var(--img_size) * 2);
+  height: calc(var(--img_size) - 2*var(--img_border_size));
   border-radius: 50%;
-  overflow: hidden;
   border: var(--img_border_size) solid #11111b;
-  position: relative;
   /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
-  margin-bottom: var(--img_bottom_margin);
   /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-  margin-left: var(--img_padding);
+  position: relative;
+  left: calc(100%/2 - max(var(--img_size), 30%)/2);
+  bottom: calc(var(--img_size) * 2/3);
+
+  z-index: 2;
+}
+
+.photo #img_stripe {
+  background-color: #11111b;
+  width: 100%; 
+  height: calc(var(--img_size) * 2/3);
+  position: relative;
+  top: calc(var(--img_size) * 1/6);
   z-index: 1;
 }
 
 
-#name_stripe {
-  width: calc(100% - 2em);
-  height: var(--stripe_height);
-  position: relative;
-  left: calc(2em + 17.5em / 2);
-  top: calc(0px - var(--stripe_height) / 2 - var(--img_bottom_margin) / 2 - var(--img_size) / 2 - var(--img_border_size)); /* Added to position it alongside the photo */
-  background-color: #11111b; /* Same color as photo border */
-  font-size: calc(var(--stripe_height) / 6);
-  display: flex;
-  align-items: center;
+.name_stripe {
+  width: 60%;
+  height: calc(var(--img_size) * 2/3);
+  background-color: #11111b;
+  align-content: center;
+  justify-content: left;
   padding-left: 20px;
   box-sizing: border-box;
 }
 
-#name_stripe b {
-  font-size: calc(1.15 * var(--stripe_height) / 6);
+
+.name_stripe span {
+  font-size: 1.5em;
 }
 
+.name_stripe b {
+  font-size: 2em;
+}
+
+
+/*
 #name_on_stripe {
   padding-left: calc(var(--img_size) / 2 + 2em);
 }
+*/
 
 #name_on_stripe span {
   transition: color 0.31s;
