@@ -112,7 +112,7 @@ a:hover {
 
 
 .name_stripe {
-  width: 60%;
+  width: 62%;
   height: calc(var(--img_size) * 2/3);
   background-color: #11111b;
   align-content: center;
@@ -123,7 +123,7 @@ a:hover {
 
 
 .name_stripe span {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .name_stripe b {
@@ -163,10 +163,16 @@ a:hover {
 
 .ability_icon {
   margin: 2em 2em;
+
 }
 
 .ability_icon img:hover {
-  filter: brightness(0) saturate(100%) invert(66%) sepia(6%) saturate(3034%) hue-rotate(220deg) brightness(109%) contrast(94%);
+  /*
+  * HSL from old is 226.15deg 63.93% 88.04%
+  * HSL from new is 267.41deg 83.51% 80.98%
+  */
+  transition-duration: 0.31s;
+  filter: brightness(91.98%) saturate(127.50%) hue-rotate(41.26deg)  drop-shadow( 0 0 17px #cba6f7);
 }
 
 .ability_icon b {
