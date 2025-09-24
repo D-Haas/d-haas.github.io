@@ -51,6 +51,7 @@ a:hover {
   padding: 23px 31px 50px 31px;
 }
 
+
 .topbar div {
   width: max(16.5em, 40vw);
 }
@@ -65,6 +66,20 @@ a:hover {
   color: #cdd6f4;
   text-decoration: none;
   margin: 0 0.5em;
+}
+
+.topbar a:hover {
+  color: #cba6f7;
+  transition: color 0.31s;
+}
+
+@media (max-width: 912px) and (orientation: portrait) {
+  .topbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
 
 .photo {
